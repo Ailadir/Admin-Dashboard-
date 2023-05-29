@@ -1,0 +1,129 @@
+body {
+  display: grid;
+  grid-template-columns: 250px auto;
+  min-height: 100vh;
+  height: 100vh;
+  // overflow: hidden;
+}
+
+.sidebar {
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 30px;
+  min-height: 100vh;
+  height: 100%;
+  width: 250px;
+  line-height: max(4rem);
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: max(3rem);
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    &-pic {
+      max-width: 5rem;
+    }
+  }
+}
+
+main {
+  display: grid;
+  grid-template-rows: 25% auto;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 30% 70%;
+  align-items: center;
+  box-shadow: 0px 5px 10px -10px black;
+  margin-top: 1rem;
+  &__searchbar {
+    display: inline-grid;
+    grid-template-columns: 10% 90%;
+    &-logo {
+      max-width: 3rem;
+      justify-self: end;
+    }
+    &-input {
+      max-height: 3rem;
+      max-width: 70%;
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+  }
+  &__profile {
+    display: inline-grid;
+    grid-template-columns: 10% 20% auto;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    &-logo {
+      max-width: 3rem;
+      &:hover {
+        animation: bellMove 1.5s ease-out;
+      }
+    }
+    &-avatar {
+      max-width: 6rem;
+    }
+  }
+  &__greeting {
+    display: grid;
+    grid: auto/15% auto;
+    gap: 0 1rem;
+    &-img {
+      justify-self: end;
+      max-width: 10rem;
+      grid-area: 1/1/3/2;
+    }
+    &-welcome {
+      font-size: 1.5rem;
+      align-self: self-end;
+    }
+    &-profilename {
+      font-size: 3rem;
+    }
+  }
+
+  &__controls {
+    display: grid;
+    grid: auto/repeat(3, 1fr);
+    justify-content: center;
+    &-item {
+      max-width: 15rem;
+      border-radius: 15px;
+      background-color: antiquewhite;
+      border: none;
+      transition: all 0.2s;
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+}
+
+.content {
+  display: grid;
+  grid: auto/80% 20%;
+  &__project {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    margin-left: 1.5rem;
+    gap: 1.5rem;
+    &-title {
+      grid-column: span 2;
+      align-self: center;
+    }
+    &-item {
+      font-size: 1.5rem;
+      border: 1px solid black;
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "extends": ["airbnb", "airbnb/hooks"],
+  "plugins": ["prettier"],
+  "rules": {
+    // "prettier/prettier": ["error", { "singleQuote": true }],
+    // "avoidEscape": "true",
+    // "allowTemplateLiterals": 2,
+    // eslint no-console: ["error", { allow: ["warn", "error"] }],
+    /*global a*/
+    /*eslint no-undef: ["error", { "typeof": true }] */
+  }
+}
